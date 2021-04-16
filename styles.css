@@ -1,60 +1,95 @@
-/*
+    /*
 ==============
     Fonts
 ==============
 */
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-
-/*
+    
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    /*
 ================ 
     Variables
 ================
 */
-
-:root {
-    /* blue shades for buttons*/
-    --clr-primary-1: #1775ac;
-    --clr-primary-2: #1a95b6;
-    --clr-primary-3: #70c6d1;
-    --clr-primary-4: #c6efed;
-    /* cream for text */
-    --clr-primary-5: #f6efed;
-}
-
-
-/*
+    
+     :root {
+        /* blue shades for buttons*/
+        --clr-primary-1: #70c6d1;
+        /* cream for text */
+        --clr-primary-2: #f6efed;
+        --ff-primary: "Josefin Sans", sans-serif;
+        --ff-secondary: "Open Sans", sans-serif;
+    }
+    /*
 ===================== 
     Global Styles
 =====================
 */
-
-h1 {
-    color: var(--clr-primary-5);
-    position: fixed;
-    margin: auto;
-    z-index: -1;
-}
-
-.video-container {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -2;
-}
-
-
-/*  global classes   */
-
-
-/*  section  */
-
-
-/*
+    
+    body {
+        font-family: var(--ff-secondary);
+        background: var(--clr-primary-1);
+        color: var(--clr-primary-2);
+        line-height: 1.5;
+        font-size: 0.875rem;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 0.75rem;
+        font-family: var(--ff-primary);
+        color: var(--clr-primary-2);
+        position: fixed;
+        margin: auto;
+    }
+    
+    .video-container {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    /*
 =============== 
 Video
 ===============
 */
-
-
-/*  switch button    */
+    /*   preloader     */
+    
+    .preloader {
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        z-index: 999;
+    }
+    
+    .hide-preloader {
+        z-index: -999;
+        visibility: hidden;
+    }
+    /*  button container     */
+    
+    .btn-container {
+        position: relative;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    /*  pause & play button  */
+    
+    .pause-btn,
+    .play-btn {
+        color: var(--clr-primary-2);
+        font-size: 0.875rem;
+        background: transparent;
+        padding: 0.375rem 0.75rem;
+    }
+    /* header after */
+    
+    header::after {
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
